@@ -1,4 +1,5 @@
-package com.tavisca.gce.practice.Access.API.Model;
+package com.tavisca.gce.practice.Save.API.Model;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +24,6 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
     public String getName() {
         return name;
