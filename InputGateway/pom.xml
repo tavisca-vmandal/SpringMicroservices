@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tavisca.gce</groupId>
-	<artifactId>request.api</artifactId>
+	<artifactId>InputGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>request.api</name>
+	<name>InputGateway</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -38,6 +38,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

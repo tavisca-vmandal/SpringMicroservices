@@ -1,4 +1,4 @@
-package com.tavisca.gce.request.api.Model;
+package com.tavisca.gce.validate.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,8 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name="Input")
-public class Input {
+@Table(name="Validate")
+public class InputDetails {
     @Column(name="input")
     private String input;
     @Id
@@ -22,15 +22,26 @@ public class Input {
     @Column(name="serviceTo")
     private String serviceTo;
 
-    public Input() {
+    @Column(name="status")
+    private String status;
+    public InputDetails() {
     }
 
-    public Input(String input, Date timeStamp, String serviceFrom, String serviceTo) {
+    public InputDetails(String input,String tid, Date timeStamp, String serviceFrom, String serviceTo, String status) {
         this.input = input;
-        this.tid = UUID.randomUUID().toString();
+        this.tid =tid;
         this.timeStamp = timeStamp;
         this.serviceFrom = serviceFrom;
         this.serviceTo = serviceTo;
+        this.status=status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getInput() {

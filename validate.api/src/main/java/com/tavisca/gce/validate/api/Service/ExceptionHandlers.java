@@ -20,14 +20,14 @@ import java.util.Date;
 public class ExceptionHandlers extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(NotValidException.class)
-    public final ResponseEntity<ErrorDetails> handleNotValidException(NotValidException ex, WebRequest request) {
-        ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
-                request.getDescription(false));
+    public final ResponseEntity<Exception> handleNotValidException(NotValidException ex) {
+//        ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
+//                request.getDescription(false));
         //return new ResponseEntity<>(errorDetails, HttpStatus.NOT_ACCEPTABLE);
 
         final String uri = "http://localhost:5050/exceptions";
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity( uri,errorDetails, ErrorDetails.class);
+        return restTemplate.postForEntity( uri,ex, Exception.class);
 
     }
 }
