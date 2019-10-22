@@ -41,4 +41,12 @@ public class Student {
         this.roll = roll;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", roll=" + roll +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

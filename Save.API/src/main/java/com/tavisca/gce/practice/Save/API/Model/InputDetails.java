@@ -1,4 +1,4 @@
-package com.tavisca.gce.request.api.Model;
+package com.tavisca.gce.practice.Save.API.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,10 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-
 @Entity
-@Table(name="Input")
-public class Input {
+@Table(name="InputData")
+public class InputDetails {
     @Column(name="input")
     private String input;
     @Id
@@ -24,12 +23,12 @@ public class Input {
 
     @Column(name="status")
     private String status;
-    public Input() {
+    public InputDetails() {
     }
 
-    public Input(String input,String tid, Date timeStamp, String serviceFrom, String serviceTo,String status) {
+    public InputDetails(String input, String tid, Date timeStamp, String serviceFrom, String serviceTo, String status) {
         this.input = input;
-        this.tid = tid;
+        this.tid =tid;
         this.timeStamp = timeStamp;
         this.serviceFrom = serviceFrom;
         this.serviceTo = serviceTo;
